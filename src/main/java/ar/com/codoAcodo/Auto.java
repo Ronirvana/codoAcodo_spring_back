@@ -11,7 +11,7 @@ public class Auto {
 	String modelo;
 	int anio;
 	float velocidadMaxima;
-	
+
 	// constructor por defecto
 	Auto() {
 		// acá va el código cuando nace el auto
@@ -30,7 +30,7 @@ public class Auto {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.velocidadMaxima = velocidadMaxima;
-		
+
 		this.velocidadActual = 0;
 		this.encendido = false;
 	}
@@ -55,7 +55,7 @@ public class Auto {
 		if(encendido) {
 			System.out.println("apagando");
 			this.encendido = false;
-			
+
 			this.detener();
 		}else {
 			System.out.println("ya está apagado");
@@ -80,7 +80,7 @@ public class Auto {
 	}
 
 	void frenar() {
-		
+
 			if(this.velocidadActual > 0) {
 				System.out.println("frenando");
 				this.velocidadActual--;
@@ -90,7 +90,7 @@ public class Auto {
 
 
 	}
-	
+
 	void quintaAfondo() {
 		if(this.encendido) {
 			while(this.velocidadActual < velocidadMaxima) {
@@ -101,19 +101,19 @@ public class Auto {
 		}else {
 			System.out.println("debe encender el auto");
 		}
-		
+
 	}
-	
+
 	void detener() {
-		
+
 			while(this.velocidadActual > 0) {
 				this.frenar();
 			}
-				
+
 		}
-	
-	
-	
+
+
+
 	void mostrarInfo() {
 
 		System.out.println("encendido: " + this.encendido);

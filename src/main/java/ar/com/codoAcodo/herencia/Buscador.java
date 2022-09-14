@@ -7,7 +7,7 @@ public class Buscador {
 
 	//default: visibles en mismo paquete y por ser usadas por cualquier clase
 	public Buscador(String claveDelUsuario) {
-		
+
 		this.setClaveBusqueda(claveDelUsuario);
 		// prevenir error nulo
 		this.setResultados(new Articulo[] {});
@@ -19,7 +19,7 @@ public class Buscador {
 		// ctrl+n para hacer una clase nueva
 
 		DBUtil db = new DBUtil();
-	
+
 		this.setResultados(db.obtenerResultado(this.getClaveBusqueda()));
 
 	}

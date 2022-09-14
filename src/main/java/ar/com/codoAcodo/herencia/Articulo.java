@@ -1,17 +1,17 @@
 package ar.com.codoAcodo.herencia;
 
 public class Articulo {
-	
+
 	private String img;
 	private String titulo;
 	private String autor;
 	private float precio;
-	
+
 	public Articulo() {}
-	
+
 	//alt+shift+s (crea constructor con los campos)
 	public Articulo(String img, String titulo, String autor, float precio) {
-		
+
 		this.img = img;
 		this.titulo = titulo;
 		this.autor = autor;
@@ -23,7 +23,7 @@ public class Articulo {
 	}
 
 	public void setImg(String img) {
-		
+
 		if(img !=null) {
 			this.img = img;
 		}else {
@@ -58,14 +58,14 @@ public class Articulo {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
 
 }
