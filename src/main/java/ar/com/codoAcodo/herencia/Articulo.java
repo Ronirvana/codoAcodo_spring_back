@@ -2,7 +2,7 @@ package ar.com.codoAcodo.herencia;
 
 public class Articulo {
 
-	private String img;
+	protected String img;
 	private String titulo;
 	private String autor;
 	private float precio;
@@ -58,6 +58,13 @@ public class Articulo {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
+
+	@Override
+	public String toString() {
+		return "Articulo [img=" + img + ", titulo=" + titulo + ", autor=" + autor + ", precio=" + precio + "]";
+	}
+	
+	
 
 
 
