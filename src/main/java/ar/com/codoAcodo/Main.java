@@ -11,8 +11,8 @@ public class Main {
 		Auto miPrimerAuto = new Auto(); // nace mi auto
 		// acá ya puedo usar los métodos de Auto
 
-		//Auto miSegundoAuto;  acá no nació, definí un objeto
-		//miSegundoAuto = new Auto(); // nace el objeto
+		// Auto miSegundoAuto; acá no nació, definí un objeto
+		// miSegundoAuto = new Auto(); // nace el objeto
 
 		miPrimerAuto.mostrarInfo();
 
@@ -23,6 +23,8 @@ public class Main {
 		// cambia el estado del atributo de un objeto
 
 		miPrimerAuto.mostrarInfo();
+		
+		
 
 	}
 

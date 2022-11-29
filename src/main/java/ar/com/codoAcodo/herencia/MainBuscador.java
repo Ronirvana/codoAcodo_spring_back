@@ -4,12 +4,11 @@ public class MainBuscador {
 
 	public static void main(String[] args) {
 
-		//simular que el usuario escribio algo
+		// simular que el usuario escribio algo
 
-		String claveDelUsuario ="iron man";
+		String claveDelUsuario = "iron man";
 
 		Buscador miBuscador = new Buscador(claveDelUsuario);
-
 
 		miBuscador.buscar();
 

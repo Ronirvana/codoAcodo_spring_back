@@ -6,7 +6,7 @@ public class Auto {
 	 * atributos
 	 */
 	boolean encendido;
-	float velocidadActual; //alt+shift+r (cambia el nombre de la variable en todos lados)
+	float velocidadActual; // alt+shift+r (cambia el nombre de la variable en todos lados)
 	String marca;
 	String modelo;
 	int anio;
@@ -25,7 +25,8 @@ public class Auto {
 		this.velocidadActual = 0;
 		this.velocidadMaxima = velocidadMaxima;
 	}
-	Auto(int anio, String marca, String modelo, float velocidadMaxima){
+
+	Auto(int anio, String marca, String modelo, float velocidadMaxima) {
 		this.anio = anio;
 		this.marca = marca;
 		this.modelo = modelo;
@@ -52,12 +53,12 @@ public class Auto {
 	}
 
 	void apagar() {
-		if(encendido) {
+		if (encendido) {
 			System.out.println("apagando");
 			this.encendido = false;
 
 			this.detener();
-		}else {
+		} else {
 			System.out.println("ya está apagado");
 		}
 
@@ -70,7 +71,7 @@ public class Auto {
 				System.out.println("acelerando");
 				this.velocidadActual++;
 
-			}else {
+			} else {
 				System.out.println("se te quema el auto");
 			}
 		} else {
@@ -81,24 +82,23 @@ public class Auto {
 
 	void frenar() {
 
-			if(this.velocidadActual > 0) {
-				System.out.println("frenando");
-				this.velocidadActual--;
-			}else {
-				System.out.println("llegaste a 0");
-			}
-
+		if (this.velocidadActual > 0) {
+			System.out.println("frenando");
+			this.velocidadActual--;
+		} else {
+			System.out.println("llegaste a 0");
+		}
 
 	}
 
 	void quintaAfondo() {
-		if(this.encendido) {
-			while(this.velocidadActual < velocidadMaxima) {
+		if (this.encendido) {
+			while (this.velocidadActual < velocidadMaxima) {
 				System.out.println("acelerando");
 				this.velocidadActual++;
 			}
 			System.out.println("se quema el auto");
-		}else {
+		} else {
 			System.out.println("debe encender el auto");
 		}
 
@@ -106,13 +106,11 @@ public class Auto {
 
 	void detener() {
 
-			while(this.velocidadActual > 0) {
-				this.frenar();
-			}
-
+		while (this.velocidadActual > 0) {
+			this.frenar();
 		}
 
-
+	}
 
 	void mostrarInfo() {
 

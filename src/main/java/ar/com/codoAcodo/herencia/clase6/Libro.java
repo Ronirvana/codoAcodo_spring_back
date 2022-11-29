@@ -2,24 +2,25 @@ package ar.com.codoAcodo.herencia.clase6;
 
 import ar.com.codoAcodo.herencia.Articulo;
 
-public class Libro extends Articulo{
-	
-	//atributos propios del libro
-	
+public class Libro extends Articulo {
+
+	// atributos propios del libro
+
 	private int nroPaginas;
 	private String isbn;
-	
+
 	public Libro(String img, String titulo, String autor, float precio) {
-		//la primer linea de código del constructor debe ser "invocar constructor del padre"
-		
-		super(img,titulo,autor,precio);
+		// la primer linea de código del constructor debe ser "invocar constructor del
+		// padre"
+
+		super(img, titulo, autor, precio);
 	}
-	
-	//polimorfismo
+
+	// polimorfismo
 	public Libro(String img, String titulo, String autor, float precio, int nroPaginas, String isbn) {
-		
-		super(img,titulo,autor,precio);
-		//seteo lo que es propio del hijo
+
+		super(img, titulo, autor, precio);
+		// seteo lo que es propio del hijo
 		this.setNroPaginas(nroPaginas);
 		this.setIsbn(isbn);
 	}
@@ -42,14 +43,7 @@ public class Libro extends Articulo{
 
 	@Override
 	public String toString() {
-		return super.toString() +", Libro [nroPaginas=" + nroPaginas + ", isbn=" + isbn + "]";
+		return super.toString() + ", Libro [nroPaginas=" + nroPaginas + ", isbn=" + isbn + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }

@@ -4,13 +4,33 @@ public class Buscador {
 
 	private String claveBusqueda;
 	private Articulo[] resultados; // esto es nulo porque es un array
+	private IFiltro filtros;
 
-	//default: visibles en mismo paquete y por ser usadas por cualquier clase
+	// default: visibles en mismo paquete y por ser usadas por cualquier clase
 	public Buscador(String claveDelUsuario) {
 
 		this.setClaveBusqueda(claveDelUsuario);
 		// prevenir error nulo
 		this.setResultados(new Articulo[] {});
+
+		this.setFiltros(CreadorDeFiltros.crearFiltroDefault());
+	}
+
+	private void setFiltros(IFiltro filtro) {
+
+		this.filtros = filtro;
+	}
+
+	public void cambiarFiltro(IFiltro nuevoFiltro) {
+
+		this.setFiltros(nuevoFiltro);
+
+	}
+
+	public void ordenar() {
+		// down casting de IFiltro a FiltroBase
+		((FiltroBase) (this.filtros)).setLista(getResultados());
+		this.filtros.ordenar();
 	}
 
 	/* firma del metodo: */
@@ -35,6 +55,8 @@ public class Buscador {
 			System.out.println("Autor: " + aux.getAutor());
 			System.out.println("Img: " + aux.getImg());
 			System.out.println("Precio: " + aux.getPrecio());
+			System.out.println("Cantidad Vendidos: " + aux.getCantidadVendido());
+			System.out.println("Fecha publicación " + aux.getFechaPublicacion());
 			System.out.println("----------------------------------------");
 
 		}

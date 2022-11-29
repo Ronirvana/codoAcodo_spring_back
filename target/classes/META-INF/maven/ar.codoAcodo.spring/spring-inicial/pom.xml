@@ -1,10 +1,69 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ar.codoAcodo.spring</groupId>
-  <artifactId>spring-inicial</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <properties>
-  	<maven.compiler.version>11</maven.compiler.version>
-  	<maven.compiler.target>11</maven.compiler.target>
-  </properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ar.codoAcodo.spring</groupId><!-- carpeta en el file system -->
+	<artifactId>spring-inicial</artifactId><!-- subcarpetas -->
+	<version>0.0.1-SNAPSHOT</version><!-- version -->
+	<properties>
+		<maven.compiler.version>11</maven.compiler.version>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+	<!-- AGREGO DEPENDENCIAS -->
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.0.31</version>
+		</dependency>
+		<!-- USAR MI PROPIA DEPENDENCIA -->
+		<dependency>
+			<groupId>ar.codoAcodo.spring</groupId>
+			<artifactId>codo-codo-collection</artifactId>
+			<version>1.0.0.SNAPSHOT</version>
+		</dependency>
+
+		<!-- dependency para consumir un api rest -->
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>3.1.0-M8</version>
+		</dependency>
+		<!-- jackson -->
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.14.0-rc2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<!-- <dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.14.0-rc2</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>3.1.0-M8</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.14.0-rc2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>3.1.0-M8</version>
+		</dependency>
+	</dependencies>
+
+
 </project>

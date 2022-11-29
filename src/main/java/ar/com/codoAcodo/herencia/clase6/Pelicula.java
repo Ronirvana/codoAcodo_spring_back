@@ -3,7 +3,7 @@ package ar.com.codoAcodo.herencia.clase6;
 import ar.com.codoAcodo.herencia.Articulo;
 
 public class Pelicula extends Articulo {
-	
+
 	private String productora;
 	private String formato;
 
@@ -15,7 +15,7 @@ public class Pelicula extends Articulo {
 		super(img, titulo, autor, precio);
 		this.productora = productora;
 		this.formato = formato;
-		
+
 	}
 
 	public String getProductora() {
@@ -38,10 +38,5 @@ public class Pelicula extends Articulo {
 	public String toString() {
 		return super.toString() + ", Pelicula [productora=" + productora + ", formato=" + formato + "]";
 	}
-	
-	
-	
-	
-	
 
 }
